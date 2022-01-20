@@ -1,0 +1,7 @@
+{
+  "name": "mendoraki",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
