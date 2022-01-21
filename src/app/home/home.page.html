@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <div class="logo">
+      <img src="./assets/liraki_isotipo.svg" alt="" />
+      <ion-title text-left> LIRAKI </ion-title>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="authSvc.logout()">
+        <ion-icon
+          slot="icon-only"
+          name="log-out-outline"
+          style="font-size: 30px"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button class="btn-scan" (click)="lector()">
+      <ion-icon slot="icon-only" name="scan-outline"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>

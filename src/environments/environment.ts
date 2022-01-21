@@ -2,8 +2,17 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const socketConfig: {
+  url: string;
+  options: object;
+} = { url: 'http://localhost:3000', options: {} };
 export const environment = {
-  production: false
+  production: false,
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  API_URL: 'https://localhost:3000',
+  // API_URL: 'https://d513-181-188-162-134.ngrok.io',
+
+  socketConfig,
 };
 
 /*

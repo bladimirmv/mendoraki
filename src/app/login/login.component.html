@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <div class="logo">
+      <img src="./assets/liraki_isotipo.svg" alt="" />
+      <ion-title text-left> LIRAKI </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img class="wave" src="./assets/wave-2.svg" alt="" />
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div class="avatar">
+          <img src="./assets/avatar.svg" alt="" />
+        </div>
+
+        <ion-list lines="full" class="form-login">
+          <ion-item class="ion-margin-bottom">
+            <ion-input
+              required
+              type="text"
+              placeholder="Nombre de usuario..."
+              [(ngModel)]="username"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-bottom">
+            <ion-input
+              required
+              type="password"
+              placeholder="Contraseña..."
+              [(ngModel)]="password"
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <ion-button
+          expand="block"
+          fill="clear"
+          shape="round"
+          class="btn-submit"
+          (click)="onLogIn()"
+        >
+          Iniciar Sesion
+        </ion-button>
+        <div class="copyright">
+          <a> @copyright - MendozArq - {{ year }}</a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <form action=""> -->
+  <!-- </form> -->
+</ion-content>
