@@ -1,0 +1,1 @@
+# mendoraki - ionic app
