@@ -48,13 +48,15 @@ ion-title {
   margin-top: 10px;
   font-size: 20px;
   font-family: cubano;
+  color: white;
+  font-weight: bold;
 }
 .stock-agotado {
-  color: var(--warn);
+  // color: var(--warn);
 }
 
 .stock-disponible {
-  color: var(--info);
+  // color: var(--info);
 }
 
 .slide-img {

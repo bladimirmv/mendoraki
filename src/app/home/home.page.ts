@@ -18,7 +18,7 @@ export class HomePage {
   ) {}
 
   lector() {
-    this.router.navigate(['producto/', '2fe5ff3e-f808-4e6d-916a-d4959bb87227']);
+    // this.router.navigate(['producto/', '2fe5ff3e-f808-4e6d-916a-d4959bb87227']);
 
     this.barcodeScanner
       .scan()

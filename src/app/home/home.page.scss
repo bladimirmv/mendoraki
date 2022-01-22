@@ -32,12 +32,19 @@ ion-title {
 }
 
 .btn-scan {
-  --background: var(--primary);
-  --border-radius: 50px;
+  --border-radius: 50px !important;
+  border-radius: 50px !important;
 
+  --background: white;
+  box-shadow: 1px 8px 8px 8px rgba(0, 0, 0, 0.08);
   width: 300px;
   height: 300px;
   ion-icon {
+    color: var(--primary);
     font-size: 400px;
+  }
+
+  &:active {
+    --background: white;
   }
 }

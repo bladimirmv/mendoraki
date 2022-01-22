@@ -7,7 +7,7 @@ const socketConfig: {
 export const environment = {
   production: true,
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  API_URL: 'http://localhost:3000',
-  // API_URL: 'https://d513-181-188-162-134.ngrok.io',
+  API_URL: 'https://a646-181-188-162-134.ngrok.io',
+  // API_URL: 'http://localhost:3000',
   socketConfig,
 };

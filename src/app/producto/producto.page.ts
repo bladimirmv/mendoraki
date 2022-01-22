@@ -2,7 +2,7 @@ import { environment } from './../../environments/environment.prod';
 import { ProductoView } from '../models/producto.interface';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 // import Swiper core and required modules
 @Component({
   selector: 'app-producto',
@@ -28,11 +28,16 @@ export class ProductoPage implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private activateRoute: ActivatedRoute
+    private activateRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
     this.uuid = this.activateRoute.snapshot.params.uuid;
+
+    if (!this.uuid) {
+      this.router.navigate(['home']);
+    }
 
     this.peticion = `${this.API_URL}/api/producto/${this.uuid}`;
 
@@ -40,7 +45,9 @@ export class ProductoPage implements OnInit {
       .get<ProductoView>(`${this.API_URL}/api/producto/${this.uuid}`)
       .subscribe((res: ProductoView) => {
         this.producto = res;
-        console.log(this.producto);
+        if (!res) {
+          this.router.navigate(['home']);
+        }
       });
   }
 
