@@ -21,7 +21,6 @@ const helper = new JwtHelperService();
 })
 export class AuthService extends RoleValidator {
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  // blank
   private API_URL = localStorage.getItem('api_url');
 
   // private API_URL = environment.API_URL;
