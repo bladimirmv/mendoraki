@@ -6,11 +6,16 @@ const socketConfig: {
   url: string;
   options: object;
 } = { url: 'http://localhost:3000', options: {} };
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const api_url = localStorage.getItem('api_url');
+
 export const environment = {
   production: false,
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  API_URL: 'https://localhost:3000',
-  // API_URL: 'https://d513-181-188-162-134.ngrok.io',
+  // API_URL: 'http://192.168.0.20:3000',
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  API_URL: api_url,
 
   socketConfig,
 };

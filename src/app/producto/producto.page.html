@@ -81,7 +81,14 @@
 
         <br />
 
-        {{producto.descripcion}}
+        <!-- {{producto.descripcion}} -->
+
+        <div
+          class="description full-column"
+          contenteditable="false"
+          id="ul-text"
+          [innerHtml]="producto.descripcion"
+        ></div>
 
         <!-- <ion-list>
           <ion-item *ngFor="let foto of producto.fotos">

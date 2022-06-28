@@ -34,6 +34,14 @@
               [(ngModel)]="password"
             ></ion-input>
           </ion-item>
+
+          <ion-item class="ion-margin-bottom">
+            <ion-input
+              type="text"
+              placeholder="Url del servidor..."
+              [(ngModel)]="url_api"
+            ></ion-input>
+          </ion-item>
         </ion-list>
 
         <ion-button
@@ -45,13 +53,19 @@
         >
           Iniciar Sesion
         </ion-button>
+        <ion-button
+          expand="block"
+          fill="clear"
+          shape="round"
+          class="btn-submit btn-secondary"
+          (click)="setUrlApi()"
+        >
+          Set API url
+        </ion-button>
         <div class="copyright">
           <a> @copyright - MendozArq - {{ year }}</a>
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  <!-- <form action=""> -->
-  <!-- </form> -->
 </ion-content>

@@ -1,4 +1,4 @@
-import { environment } from './../../environments/environment.prod';
+// import { environment } from './../../environments/environment.prod';
 import { ProductoView } from '../models/producto.interface';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -23,7 +23,9 @@ export class ProductoPage implements OnInit {
     },
   };
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  private API_URL = environment.API_URL;
+  private API_URL = localStorage.getItem('api_url');
+
+  // private API_URL = environment.API_URL;
   private uuid = '';
 
   constructor(

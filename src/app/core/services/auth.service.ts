@@ -9,7 +9,7 @@ import { catchError, map } from 'rxjs/operators';
 import { RoleValidator } from './../../models/usuario.interface';
 import { Usuario } from './../../models/usuario.interface';
 import { UsuarioResponse } from './../../models/usuario.interface';
-import { environment } from './../../../environments/environment.prod';
+// import { environment } from './../../../environments/environment.prod';
 
 import { Router } from '@angular/router';
 
@@ -21,7 +21,10 @@ const helper = new JwtHelperService();
 })
 export class AuthService extends RoleValidator {
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  private API_URL = environment.API_URL;
+  // blank
+  private API_URL = localStorage.getItem('api_url');
+
+  // private API_URL = environment.API_URL;
   private loggedIn = new BehaviorSubject<boolean>(false);
   private usuario = new BehaviorSubject<Usuario>(null);
   // eslint-disable-next-line @typescript-eslint/member-ordering
@@ -35,6 +38,7 @@ export class AuthService extends RoleValidator {
   ) {
     super();
     this.checkToken();
+    // this.toast('API_URL: ' + environment.API_URL, 'API_URL', 'primary');
   }
   // ====================================================================
   get isLogged(): Observable<boolean> {
@@ -107,7 +111,8 @@ export class AuthService extends RoleValidator {
   }
   // ====================================================================
   private handdleError(httpError: HttpErrorResponse | any): Observable<never> {
-    let errorMessage = '';
+    // let errorMessage = '';
+    let errorMessage = httpError.message;
 
     if (httpError.error.message) {
       if (typeof httpError.error.message === 'string') {
