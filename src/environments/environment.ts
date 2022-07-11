@@ -12,11 +12,9 @@ const api_url = localStorage.getItem('api_url');
 
 export const environment = {
   production: false,
+  // API_URL: api_url,
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  // API_URL: 'http://192.168.0.20:3000',
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  API_URL: api_url,
-
+  API_URL: 'http://localhost:3000',
   socketConfig,
 };
 

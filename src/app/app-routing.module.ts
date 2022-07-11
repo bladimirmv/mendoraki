@@ -9,6 +9,13 @@ const routes: Routes = [
       import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
+    path: 'mapa',
+    loadChildren: () =>
+      import('./mapa-proyectos/mapa-proyectos.module').then(
+        (m) => m.MapaProyectosModule
+      ),
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',

@@ -3,6 +3,7 @@ import { ProductoView } from '../models/producto.interface';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 // import Swiper core and required modules
 @Component({
   selector: 'app-producto',
@@ -24,8 +25,8 @@ export class ProductoPage implements OnInit {
   };
   // eslint-disable-next-line @typescript-eslint/naming-convention
   private API_URL = localStorage.getItem('api_url');
-
   // private API_URL = environment.API_URL;
+
   private uuid = '';
 
   constructor(

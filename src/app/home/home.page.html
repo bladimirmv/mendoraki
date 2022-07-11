@@ -19,8 +19,14 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-button class="btn-scan" (click)="lector()">
+    <ion-button (click)="mapaProyectos()">
+      <ion-icon slot="icon-only" name="map"></ion-icon>
+      &nbsp;Mapa
+    </ion-button>
+
+    <ion-button (click)="lector()">
       <ion-icon slot="icon-only" name="scan-outline"></ion-icon>
+      &nbsp;Escanear
     </ion-button>
   </div>
 </ion-content>

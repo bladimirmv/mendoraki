@@ -31,4 +31,8 @@ export class HomePage {
         console.log('Error', err);
       });
   }
+
+  mapaProyectos(): void {
+    this.router.navigate(['/mapa']);
+  }
 }

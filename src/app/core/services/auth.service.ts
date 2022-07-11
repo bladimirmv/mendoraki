@@ -14,6 +14,7 @@ import { UsuarioResponse } from './../../models/usuario.interface';
 import { Router } from '@angular/router';
 
 import { ToastController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 
 const helper = new JwtHelperService();
 @Injectable({
@@ -22,7 +23,6 @@ const helper = new JwtHelperService();
 export class AuthService extends RoleValidator {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   private API_URL = localStorage.getItem('api_url');
-
   // private API_URL = environment.API_URL;
   private loggedIn = new BehaviorSubject<boolean>(false);
   private usuario = new BehaviorSubject<Usuario>(null);

@@ -1,0 +1,27 @@
+ion-toolbar {
+  --background: var(--gray0);
+  background-color: var(--gray0);
+  color: var(--text-color);
+  font-family: var(--font-head);
+}
+
+ion-content {
+  --background: var(--primary);
+  --color: var(--text-color);
+}
+
+.logo {
+  display: flex;
+  padding-left: 5px;
+  img {
+    height: 50px;
+  }
+
+  ion-title {
+    padding-left: 5px;
+  }
+}
+
+ion-title {
+  font-size: 40px;
+}

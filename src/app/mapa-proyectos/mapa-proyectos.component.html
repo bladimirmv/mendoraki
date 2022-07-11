@@ -1,0 +1,47 @@
+<!-- <main
+  style="
+    height: calc(100% - 70px) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  "
+> -->
+<!-- <br /> -->
+<!-- <mat-form-field class="filter-map">
+      <mat-label>Proyectos</mat-label>
+      <mat-select value="todos">
+        <mat-option value="todos" (click)="onSelectAll()">VER TODOS </mat-option>
+        <mat-option
+          *ngFor="let p of proyectos"
+          [value]="p.uuid"
+          (click)="onSelect(p)"
+        >
+          {{ p.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+
+<!-- </main> -->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <div class="logo">
+      <img src="./assets/liraki_isotipo.svg" alt="" />
+      <ion-title text-left> LIRAKI </ion-title>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-back-button
+        defaultHref="home"
+        text=""
+        icon="arrow-back"
+        color="danger"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="full-column" style="height: 100%; width: 100%" id="map"></div>
+</ion-content>
