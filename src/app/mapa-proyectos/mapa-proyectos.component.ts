@@ -36,8 +36,8 @@ export interface ProyectoView extends Proyecto {
 })
 export class MapaProyectosComponent implements OnInit {
   public proyectos: Array<ProyectoView> = [];
-  // private API_URL = environment.API_URL;
-  private API_URL = localStorage.getItem('api_url');
+  private API_URL = environment.API_URL;
+  // private API_URL = localStorage.getItem('api_url');
   private destroy$ = new Subject<any>();
 
   // *maps leaflet =====================================================>
@@ -126,8 +126,9 @@ export class MapaProyectosComponent implements OnInit {
         <div><b>Cliente:</b> ${p.nombreCliente} ${p.apellidoPaterno} ${
             p.apellidoMaterno
           }</div>
-        <div><b>Fecha:</b> ${p.fechaInicio}'
-        )} - ${p.fechaFinal}</div>
+        <div><b>Fecha:</b> ${new Date(p.fechaInicio).toLocaleDateString(
+          'es'
+        )} - ${new Date(p.fechaFinal).toLocaleDateString('es')}</div>
         <div><b>Direccion: </b>${p.lugarProyecto}</div>
         `,
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
@@ -21,9 +22,8 @@ const helper = new JwtHelperService();
   providedIn: 'root',
 })
 export class AuthService extends RoleValidator {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  private API_URL = localStorage.getItem('api_url');
-  // private API_URL = environment.API_URL;
+  private API_URL = environment.API_URL;
+  // private API_URL = localStorage.getItem('api_url');
   private loggedIn = new BehaviorSubject<boolean>(false);
   private usuario = new BehaviorSubject<Usuario>(null);
   // eslint-disable-next-line @typescript-eslint/member-ordering
