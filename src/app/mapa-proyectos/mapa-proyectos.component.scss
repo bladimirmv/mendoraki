@@ -25,3 +25,11 @@ ion-content {
 ion-title {
   font-size: 40px;
 }
+
+.list-places {
+  position: absolute;
+  z-index: 999999;
+  right: 0;
+  opacity: 0.4;
+  max-width: 120px;
+}

@@ -36,13 +36,13 @@ export interface ProyectoView extends Proyecto {
 })
 export class MapaProyectosComponent implements OnInit {
   public proyectos: Array<ProyectoView> = [];
+  public option: ProyectoView | 'todos' = 'todos';
   private API_URL = environment.API_URL;
   // private API_URL = localStorage.getItem('api_url');
   private destroy$ = new Subject<any>();
 
   // *maps leaflet =====================================================>
   private bounds: Array<Number[]> = [];
-
   private mapa: Map;
   private greenIcon = new Icon({
     iconUrl: './assets/green_marker.png',
@@ -145,5 +145,22 @@ export class MapaProyectosComponent implements OnInit {
     });
 
     this.mapa.fitBounds(this.bounds as [[number, number]]);
+  }
+
+  public onSelectAll(): void {
+    this.mapa.fitBounds(this.bounds as [[number, number]]);
+  }
+
+  onChange(): void {
+    this.mapa.fitBounds(this.bounds as [[number, number]]);
+
+    if (this.option !== 'todos') {
+      this.mapa.fitBounds([
+        [
+          Number(this.option.latLng.split(',')[0]),
+          Number(this.option.latLng.split(',')[1]),
+        ],
+      ]);
+    }
   }
 }
